@@ -3,15 +3,17 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {};
-        weapons[] = {};
+        units[] = {
+            QCLASS(Wall_E),
+            QCLASS(Wall_E_Backpack)
+        };
+        weapons[] = {
+            QCLASS(Diffuser)
+        };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "tacgt_main",
-            "CUP_Weapons_AmmoBoxes",
-            "CUP_Weapons_Grenades",
-            "CUP_Weapons_Put",
-            "CUP_Weapons_ACE_compat"
+            "tacgt_theseus"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(main,Author);
@@ -21,5 +23,7 @@ class CfgPatches {
     };
 };
 
+#include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"

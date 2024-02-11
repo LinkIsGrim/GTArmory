@@ -6,13 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {
-            "tacgt_main",
-            "CUP_Weapons_AmmoBoxes",
-            "CUP_Weapons_Grenades",
-            "CUP_Weapons_Put",
-            "CUP_Weapons_ACE_compat"
-        };
+        requiredAddons[] = {"tacgt_main", "ace_map"};
         skipWhenMissingDependencies = 1;
         author = ECSTRING(main,Author);
         authors[] = {"Mike"};
@@ -21,5 +15,5 @@ class CfgPatches {
     };
 };
 
-#include "CfgMagazines.hpp"
-#include "CfgVehicles.hpp"
+#include "CfgMarkerClasses.hpp"
+#include "CfgMarkers.hpp"
